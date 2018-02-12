@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Add Homework</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+    <h2>Student Name : {{currentEvent?.name}}</h2>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-card class="add-guest-form">
+    <ion-card-header>
+      Add Homework
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input [(ngModel)]="guestName" type="text" placeholder="What's your homework name?"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col col-4>
+          <button ion-button icon-only (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <span *ngIf="guestPicture">Picture taken!</span>
+      <button ion-button color="primary" block (click)="addGuest(guestName)" [disabled]="!guestName">
+        Add Homework
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card-content>
+    <ion-list no-lines>
+      <button ion-button color="primary" block (click)=" gotophoto()"> See List Of HomeWork </button>
+    </ion-list>
+  </ion-card-content>
+  
+
+
+
+</ion-content>

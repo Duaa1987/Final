@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New student</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>student Name</ion-label>
+    <ion-input [(ngModel)]="studentName" type="text" placeholder="What's your student name?">
+    </ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label stacked>Student Id</ion-label>
+    <ion-input [(ngModel)]="studentId" type="number" placeholder="Id?">
+    </ion-input>
+  </ion-item>
+
+  
+  <button ion-button block (click)="createEvent(studentName, studentId)">
+    Add Student
+  </button>
+</ion-content>
